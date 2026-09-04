@@ -62,6 +62,16 @@ services:
       - NODE_ENV=production
     volumes:
       - translink:/app/data
+  
+  dicebear:
+    image: dicebear/api:4
+    container_name: dicebear
+    restart: unless-stopped
+    ports:
+      - '5700:3000'
+    tmpfs:
+      - '/run'
+      - '/tmp'
 
 volumes:
   slash:
