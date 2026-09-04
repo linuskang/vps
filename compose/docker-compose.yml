@@ -46,7 +46,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      VEHICLE_API_URL: http://api:8000/v1/seq/vehicle_positions
+      VEHICLE_API_URL: http://translink-api:8000/v1/seq/vehicle_positions
       NEXT_PUBLIC_MAPTILER_KEY: ${TRANSLINK_MAPTILER_KEY}
     depends_on:
       translink-api:
